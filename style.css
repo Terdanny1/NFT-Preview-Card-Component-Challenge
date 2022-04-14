@@ -7,10 +7,6 @@ body {
   background-color: hsl(216, 50%, 16%);
   border-radius: 15px;
   margin: 30px auto;
-  /* display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center; */
   width: 350px;
   height: 580px;
   padding-top: 30px;
@@ -18,17 +14,33 @@ body {
 .image-container {
   border-radius: 10px;
   margin: 0 auto;
-  /* display: flex;
-  flex-flow: column;
-  align-items: center;
-  justify-content: center; */
   width: 300px;
   height: 300px;
+  position: relative;
 }
 .image {
   border-radius: 10px;
   width: 300px;
   height: 300px;
+  opacity: 1;
+  transition: .5s ease;
+}
+.icon{
+  position: absolute;
+  top: 47%;
+  left: 43%;
+  visibility: hidden;
+}
+.image-container:hover .image{
+  cursor: grab;
+  opacity: 0.3;
+} 
+.image-container:hover .icon{
+  visibility: visible;
+  transition: .5s ease;
+}
+.image-container:hover{
+  background-color: hsl(178, 100%, 50%);
 }
 .text-container {
   color: white;
@@ -37,9 +49,37 @@ body {
   border-bottom: 1px solid white;
   padding-bottom: 10px;
 }
+.text-container h1:hover{
+  color: hsl(178, 100%, 50%);
+  cursor: grab;
+}
 .span-eth {
   display: inline-block;
+  color: hsl(178, 100%, 50%);
 }
 .pry-float {
   float: right;
+}
+.avatar-container{
+  display: block;
+  width: 300px;
+  height: 30px;
+  margin: 15px auto;
+}
+.avatar-container p:hover{
+  color: hsl(178, 100%, 50%);
+  cursor: grab;
+  
+}
+.avatar{
+  float: left;
+}
+.avatar-text{
+  display: inline;
+  padding-left:20px;
+  font-size: 18px;
+  color: white;
+}
+span{
+  color:  hsl(215, 51%, 70%);
 }
